@@ -70,7 +70,9 @@ function Footer() {
                                     <i class="fas fa-envelope me-3"></i>
                                     info@example.com
                                 </p>
-                                <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                                <p><i class="fas fa-phone me-3"></i>7542061065</p>
+                                <p><i class="fas fa-phone me-3"></i>7632966717</p>
+
                             </div>
                         </div>
                     </div>

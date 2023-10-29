@@ -6,7 +6,6 @@ import Navbar from './Navbar';
 function Payment() {
     return (
         <>
-        <Navbar />
             <div className="container-fluid ">
                 <div class="card">
                     <div class="row">

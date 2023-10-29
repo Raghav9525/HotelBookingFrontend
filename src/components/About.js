@@ -1,11 +1,11 @@
 
 import React from 'react'
 import Navbar from './Navbar'
+import Footer from './Footer'
 
 function About() {
     return (
-        <div>
-            <Navbar />
+        <>
             <h1 class="fs-1 text-primary text-center mt-3">About</h1>
             <div class="container">
                 <div class="row">
@@ -38,7 +38,8 @@ function About() {
                     </div>
                 </div>
             </div>
-        </div>
+            <Footer />
+        </>
     )
 }
 

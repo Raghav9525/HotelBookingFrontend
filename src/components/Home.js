@@ -4,11 +4,12 @@ import 'bootstrap/dist/js/bootstrap.min.js'; // Import Bootstrap JavaScript
 import './style.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Rooms from './Rooms';
+import About from './About';
 
 function Home() {
   return (
     <div>
-      <Navbar />
       <div id="carouselExampleControls" className="carousel slide img-fluid carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -30,7 +31,10 @@ function Home() {
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <Footer />
+
+      {/* Rooms section */}
+      <Rooms />
+      <About />
     </div>
 
   );

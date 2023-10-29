@@ -23,7 +23,7 @@ function UserPanel() {
   async function fetchData() {
     try {
       // Use backticks for string interpolation
-      let url = `http://localhost:5000/userpanel/confirm_booking?mobile=${mobile}`;
+      let url = `https://hotelbookingbackend-bg0y.onrender.com/userpanel/confirm_booking?mobile=${mobile}`;
 
       const response = await axios.get(url);
       console.log(response.data)
@@ -38,7 +38,7 @@ function UserPanel() {
   }, [bookingCancel]);
 
   const handleButtonClick = (id) => {
-    axios.post(`http://localhost:5000/user/cancelbooking/${id}`)
+    axios.post(`https://hotelbookingbackend-bg0y.onrender.com/user/cancelbooking/${id}`)
       .then((res) => {
         console.log('handleButtonClicked');
         setBookingCancel(!bookingCancel);

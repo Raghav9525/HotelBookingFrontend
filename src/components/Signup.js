@@ -23,13 +23,17 @@ function Signup() {
         event.preventDefault();
 
         // Send data to the database if there are no validation errors
-        axios.post("http://localhost:5000/signup", values)
+        axios.post("https://hotelbookingbackend-bg0y.onrender.com/signup", values)
+        
             .then((res) => {
                 if (res.status === 200) {
-                    if (id === undefined) {
+                    console.log("id"+id)
+                    if (id === "gotologin") {
+                        console.log("hello")
                         navigate('/login')
                     }
                     else {
+                        console.log("/roombook/${id} route")
                         navigate(`/roombook/${id}`)
                     }
                 } else {
@@ -48,7 +52,6 @@ function Signup() {
 
     return (
         <>
-            <Navbar />
             <div id="booking-container" class="container-fluid vh-100">
 
                 <h5>If Already Register click Continue to booking</h5>

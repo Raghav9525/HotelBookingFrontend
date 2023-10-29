@@ -7,10 +7,13 @@ import Navbar from './Navbar';
 
 
 function RoomBook() {
+
+    const navigate = useNavigate()
     let { id } = useParams();
     // Convert id to an integer
     id = parseInt(id);
-    // Find the room data with the matching id
+  
+     // Find the room data with the matching id
     const room = roomData.find((room) => room.id === id);
 
     // set initial value to value state
@@ -27,14 +30,14 @@ function RoomBook() {
         message: '',
     });
 
-    const navigate = useNavigate()
+ 
 
     const submitForm = (event) => {
         event.preventDefault();
 
         // Send data to the database if there are no validation errors
         if (values.nam !== "") {
-            axios.post("http://localhost:5000/roombook", values)
+            axios.post("https://hotelbookingbackend-bg0y.onrender.com/roombook", values)
                 .then((res) => {
                     console.log("Data sent");
                     setInsertionStatus({
@@ -63,7 +66,6 @@ function RoomBook() {
 
     return (
         <>
-        <Navbar />
             <div id="admission" className='d-flex justify-content-center align-items-center vh-100'>
                 <div className='bg-white p-3 rounded w-50'>
                     <form onSubmit={submitForm}>

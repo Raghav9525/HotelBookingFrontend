@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 
 function Admin() {
   const [data, setData] = useState([]);
-  const [url, setUrl] = useState('http://localhost:5000/admin/booking_req'); // Default URL
+  const [url, setUrl] = useState('https://hotelbookingbackend-bg0y.onrender.com/admin/booking_req'); // Default URL
   //for display messsage
   const [requestDataName, setRequestDataName] = useState('Booking Request Details')
   // when booking accepted, bookingAccept state update so useEffect render again becuse dependency
@@ -34,7 +34,7 @@ function Admin() {
   }, [bookingAccept, url]);
 
   const handleButtonClick = (mobile) => {
-    axios.post(`http://localhost:5000/admin/approve/${mobile}`)
+    axios.post(`https://hotelbookingbackend-bg0y.onrender.com/admin/approve/${mobile}`)
       .then((res) => {
         console.log('handleButtonClicked');
         setBookingAccept(!bookingAccept);
@@ -47,10 +47,10 @@ function Admin() {
   function roomRequstUrl() {
     // both are true to see all column
     setConfirmBookingFlag(true)
-     setCustomerData(true)
+    setCustomerData(true)
 
     setRequestDataName("Booking Request Details")
-    setUrl('http://localhost:5000/admin/booking_req')
+    setUrl('https://hotelbookingbackend-bg0y.onrender.com/admin/booking_req')
   }
 
   function confirmBookingUrl() {
@@ -59,10 +59,10 @@ function Admin() {
     setCustomerData(true)
 
     setRequestDataName("Confirm Booking Details")
-    setUrl('http://localhost:5000/admin/conform_booking')
+    setUrl('https://hotelbookingbackend-bg0y.onrender.com/admin/conform_booking')
   }
 
-  function userDetail(){
+  function userDetail() {
     setCustomerData(false)
     setRequestDataName("Customer Details")
 
@@ -70,8 +70,6 @@ function Admin() {
 
   return (
     <div className="adminpage">
-      <Navbar />
-      <div >
         <h2>Admin Panel</h2>
         <br /><br />
         <div className=''>
@@ -90,35 +88,35 @@ function Admin() {
               <th>Mobile</th>
               <th>Address</th>
               {/* customerData false then not display these column*/}
-              {customerData  &&<th> CheckInDate</th> } 
-              {customerData  &&<th>CheckOutDate</th> }
-              {customerData  && <th>Hotel Name</th>}
-              {customerData && <th>No of Bed</th> }
+              {customerData && <th> CheckInDate</th>}
+              {customerData && <th>CheckOutDate</th>}
+              {customerData && <th>Hotel Name</th>}
+              {customerData && <th>No of Bed</th>}
               {customerData && confirmBookingFlag && <th>Button</th>}
 
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((item) => (
-            <tr key={item.id}>
-              <td>{item.name}</td>
-              <td>{item.mobile}</td>
-              <td>{item.address}</td>
-              {customerData  &&<td>{item.checkin_date}</td> }
-              {customerData  &&<td>{item.checkout_date}</td> }
-              {customerData  &&<td>{item.hotelname}</td> }
-              {customerData  &&<td>{item.no_of_bed}</td> }
-              {confirmBookingFlag && confirmBookingFlag &&
-                <td>
-                  <button className="btn btn-primary" onClick={() => handleButtonClick(item.mobile)}>Accept Booking</button>
-                </td>
-              }
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.map((item) => (
+              <tr key={item.id}>
+                <td>{item.name}</td>
+                <td>{item.mobile}</td>
+                <td>{item.address}</td>
+                {customerData && <td>{item.checkin_date}</td>}
+                {customerData && <td>{item.checkout_date}</td>}
+                {customerData && <td>{item.hotelname}</td>}
+                {customerData && <td>{item.no_of_bed}</td>}
+                {confirmBookingFlag && confirmBookingFlag &&
+                  <td>
+                    <button className="btn btn-primary" onClick={() => handleButtonClick(item.mobile)}>Accept Booking</button>
+                  </td>
+                }
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
     </div>
-    </div >
   );
 }
 

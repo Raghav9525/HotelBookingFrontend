@@ -20,6 +20,13 @@
     background-position: center;
 }
 
+.header b{
+    font-size: medium;
+    position: absolute;
+    margin: -5px 0;
+    z-index: 1;
+}
+
 nav{
     display: flex;
     align-items: center;
@@ -69,7 +76,6 @@ nav ul li a:hover::after{
 nav .fas{
     display: none;
 }
-
 
 /* navbar reponsive page */
 

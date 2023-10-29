@@ -7,6 +7,7 @@ import Cookies from 'js-cookie';
 import Navbar from './Navbar'
 import { useSelector, useDispatch } from 'react-redux';
 import { authSuccess } from '../reduxPrac/slices/authentication';
+import Footer from './Footer';
 
 // import LoginValidation from './LoginValidation';
 
@@ -30,8 +31,7 @@ function Login() {
         event.preventDefault();
         // setErrors(LoginValidation(values));
         try {
-            const response = await axios.post("http://localhost:5000/adminlogin", values)
-            console.log("hey")
+            const response = await axios.post("https://hotelbookingbackend-bg0y.onrender.com/adminlogin", values)
             if (response.status === 200) {
                 const data = response.data;
                 console.log(data.token)
@@ -56,8 +56,8 @@ function Login() {
     }
 
     return (
-        <div>
-            <Navbar />
+        <>
+
             <div id="booking-container" class="container-fluid vh-100">
                 <div class="row">
                     <div class="col-sm-3"></div>
@@ -92,14 +92,15 @@ function Login() {
 
                                 <button type="submit" onClick={submitForm} class="btn btn-primary">Admin Login</button>
                                 <br />
-                                <NavLink to="/signup/${id}">New user?Create Account</NavLink>
+                                <NavLink to={`/signup/${id}`}>New user? Create Account</NavLink>
                             </form>
                         </div>
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
             </div>
-        </div>
+            <Footer />
+        </>
     )
 }
 

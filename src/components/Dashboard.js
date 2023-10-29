@@ -14,6 +14,7 @@ import AdminLogin from './AdminLogin'
 
 import { useSelector, useDispatch } from 'react-redux';
 import UserPanel from './UserPanel';
+import Contact from './Contact';
 
 
 function Dashboard() {
@@ -24,14 +25,12 @@ function Dashboard() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/room" element={<Rooms />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/roombook/:id" element={<RoomBook />} />
-
                 <Route path="/userpanel" element={authentication ? <UserPanel /> : <Login />} />
-
                 <Route path="/admin" element={authentication ? <Admin /> : <Login />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/adminlogin" element={<AdminLogin />} />
-
                 <Route path="/signup/:id" element={<Signup />} />
                 <Route path="/payment" element={<Payment />} />
 
@@ -41,7 +40,6 @@ function Dashboard() {
                 <Route path="/meeting" element={<MeetingPage />} />
                 <Route path='admin/editfaculty' element={<FacultyUpload />} /> */}
             </Routes>
-
         </div>
     );
 }
