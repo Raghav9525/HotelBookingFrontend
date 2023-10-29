@@ -103,7 +103,7 @@ function Signup() {
                                     />
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">SignUp</button>
+                                <button type="submit" class="btn btn-primary me-2">SignUp</button>
                                 <button onClick={() => navigate(`/roombook/${id}`)} class="btn btn-primary">Already Register</button>
 
                                 <br />

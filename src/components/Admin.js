@@ -58,7 +58,7 @@ function Admin() {
     // setCustomerData is true to see CheckInDate,CheckOutDate
     setCustomerData(true)
 
-    setRequestDataName("Confirm Booking Request Details")
+    setRequestDataName("Confirm Booking Details")
     setUrl('http://localhost:5000/admin/conform_booking')
   }
 
@@ -75,8 +75,8 @@ function Admin() {
         <h2>Admin Panel</h2>
         <br /><br />
         <div className=''>
-          <button className="btn btn-primary" onClick={roomRequstUrl}>Room Request</button>
-          <button className="btn btn-dark" onClick={confirmBookingUrl}>Confirm Booking</button>
+          <button className="btn btn-primary me-2" onClick={roomRequstUrl}>Room Request</button>
+          <button className="btn btn-dark me-2" onClick={confirmBookingUrl}>Confirm Booking</button>
           <button className="btn btn-primary" onClick={userDetail}>Customer Details</button>
         </div>
 

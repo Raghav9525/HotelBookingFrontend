@@ -115,14 +115,15 @@ nav .fas{
 /* //footer section */
 
 .footer{
-    /* background-color: #1E90FF; */
-    background-color: #cfdcfb;
+    background-color: #1E90FF;
+    /* background-color: #cfdcfb; */
 
 }
 
 /* admin page */
 
 .adminpage{
+    height: 100vh;
     background-color: #cfdcfb;
 }
 #mytable{

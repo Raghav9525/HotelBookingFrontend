@@ -19,7 +19,7 @@ function Rooms() {
     return (
         <div>
             <Navbar />
-            <button className="btn btn-primary" onClick={() => navigate("/admin")}>Admin</button>
+            {/* <button className="btn btn-primary" onClick={() => navigate("/admin")}>Admin</button> */}
 
             <div class="container mt-3 room">
                 <div className="row">

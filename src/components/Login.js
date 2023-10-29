@@ -93,8 +93,8 @@ function Login() {
                                     {/* {errors.password && <span className='text-danger'> {errors.password}</span>} */}
                                 </div>
 
-                                <button type="submit" onClick={submitForm} class="btn btn-primary">User Login</button>
-                                <button  onClick={()=>navigate("/adminlogin")} class="btn btn-primary">Admin Login</button><br />
+                                <button type="submit" onClick={submitForm} class="btn btn-primary me-2">User Login</button>
+                                <button  onClick={()=>navigate("/adminlogin")} class="btn btn-primary ">Admin Login</button><br />
 
                                 {/* <NavLink to="/adminlogin">Admin Login</NavLink> */}
 
