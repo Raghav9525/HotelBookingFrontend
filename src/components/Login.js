@@ -61,11 +61,11 @@ function Login() {
 
     return (
         <>
-            <div id="booking-container" class="container-fluid  align-items-center vh-100 ">
+            <div id="booking-container" class="container-fluid  align-items-center vh-60 ">
                 <div class="row ">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
-                        <div class="card p-4 mt-5" >
+                        <div class="card p-4 mt-4 mb-4" >
                             {/* style={{color: "#fff"; background-color: "rgba(47, 28, 28, 0.5)"}} */}
                             <form onSubmit={submitForm}>
 
@@ -105,7 +105,7 @@ function Login() {
                 </div>
                 <div class="col-sm-3"></div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

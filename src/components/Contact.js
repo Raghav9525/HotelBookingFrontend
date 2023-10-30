@@ -5,7 +5,7 @@ import Footer from './Footer'
 function Contact() {
     return (
         <>
-            <h1 class="fs-1 text-primary text-center mt-3">Feedback</h1>
+            <h1 class="fs-1 text-primary text-center mt-2">Feedback</h1>
             <div class="container mt-4 mb-4">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
@@ -96,7 +96,7 @@ function Contact() {
                     </button>
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

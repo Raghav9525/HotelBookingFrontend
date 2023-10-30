@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import Login from './Login';
 import 'bootstrap/dist/css/bootstrap.css';
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import Navbar from './Navbar';
 
 function Signup() {
     const { id } = useParams()
@@ -24,10 +22,10 @@ function Signup() {
 
         // Send data to the database if there are no validation errors
         axios.post("https://hotelbookingbackend-bg0y.onrender.com/signup", values)
-        
+
             .then((res) => {
                 if (res.status === 200) {
-                    console.log("id"+id)
+                    console.log("id" + id)
                     if (id === "gotologin") {
                         console.log("hello")
                         navigate('/login')
@@ -52,7 +50,7 @@ function Signup() {
 
     return (
         <>
-            <div id="booking-container" class="container-fluid vh-100">
+            <div id="booking-container" class="container-fluid vh-80 pb-4">
 
                 <h5>If Already Register click Continue Booking Button</h5>
                 <div class="row mt-4">

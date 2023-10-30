@@ -4,6 +4,7 @@ import { store } from './reduxPrac/store';
 import { Provider } from 'react-redux';
 import Dashboard from './components/Dashboard';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Dashboard />
+        <Footer />
       </BrowserRouter>
     </Provider>
 

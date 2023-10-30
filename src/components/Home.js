@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import Rooms from './Rooms';
 import About from './About';
+import Contact from './Contact';
 
 function Home() {
   return (
@@ -31,9 +32,13 @@ function Home() {
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
+      
+      {/* Rooms section */}
+      {/* <h1 class="fs-1 text-primary text-center mt-3">Rooms</h1> */}
+      <Rooms />
+      <Contact />
       {/* About section */}
-      <h1 class="fs-1 text-primary text-center mt-3">About</h1>
+      {/* <h1 class="fs-1 text-primary text-center mt-3">About</h1>
       <div class="container mb-2">
         <div class="row">
           <div class="col-sm-6">
@@ -53,15 +58,10 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <About />
 
-
-      {/* Rooms section */}
-      <h1 class="fs-1 text-primary text-center mt-3">Rooms</h1>
-      <Rooms />
-      <Footer />
     </div>
-
   );
 }
 

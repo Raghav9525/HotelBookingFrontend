@@ -46,7 +46,7 @@ function RoomDetails() {
                 </div>
 
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </>
 
 

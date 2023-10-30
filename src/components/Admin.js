@@ -69,7 +69,8 @@ function Admin() {
   }
 
   return (
-    <div className="adminpage">
+    <>
+      <div className="adminpage mb-4">
         <h2>Admin Panel</h2>
         <br /><br />
         <div className=''>
@@ -81,7 +82,7 @@ function Admin() {
         <br />
         <br />
         <h3>{requestDataName}</h3>
-        <table id="mytable" className="table table-striped table-bordered">
+        <table id="mytable" className="table table-striped table-bordered vh-100">
           <thead>
             <tr>
               <th>Name</th>
@@ -115,8 +116,8 @@ function Admin() {
             ))}
           </tbody>
         </table>
-
-    </div>
+      </div>
+    </>
   );
 }
 

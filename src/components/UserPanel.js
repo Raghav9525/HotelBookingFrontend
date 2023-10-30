@@ -5,9 +5,9 @@ import { useSelector } from 'react-redux';
 import Navbar from './Navbar';
 
 function UserPanel() {
-// get login detail to find specific user booking from table
-    const location = useLocation();
-    const { mobile, password } = location.state;
+  // get login detail to find specific user booking from table
+  const location = useLocation();
+  const { mobile, password } = location.state;
 
   const [bookingCancel, setBookingCancel] = useState(0);
   const [data, setData] = useState([]);
@@ -54,38 +54,38 @@ function UserPanel() {
         <h2>User Panel</h2>
         <br /><br />
 
-      
+
         <h3>{requestDataName}</h3>
         <table id="mytable" className="table table-striped table-bordered">
           <thead>
             <tr>
               <th>Name</th>
               <th>Mobile</th>
-              <th> CheckInDate</th> 
+              <th> CheckInDate</th>
               <th>CheckOutDate</th>
               <th>Hotel Name</th>
               <th>No of Bed</th>
               <th>Button</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((item) => (
-            <tr key={item.id}>
-              <td>{item.name}</td>
-              <td>{item.mobile}</td>
-              <td>{item.checkin_date}</td>
-              <td>{item.checkout_date}</td>
-              <td>{item.hotelname}</td>
-              <td>{item.no_of_bed}</td>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((item) => (
+              <tr key={item.id}>
+                <td>{item.name}</td>
+                <td>{item.mobile}</td>
+                <td>{item.checkin_date}</td>
+                <td>{item.checkout_date}</td>
+                <td>{item.hotelname}</td>
+                <td>{item.no_of_bed}</td>
                 <td>
                   <button className="btn btn-primary" onClick={() => handleButtonClick(item.id)}>Cancel Booking</button>
                 </td>
-            
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div >
   );
 }
