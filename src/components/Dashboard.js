@@ -15,6 +15,7 @@ import AdminLogin from './AdminLogin'
 import { useSelector, useDispatch } from 'react-redux';
 import UserPanel from './UserPanel';
 import Contact from './Contact';
+import RoomDetails from './RoomDetails';
 
 
 function Dashboard() {
@@ -26,6 +27,9 @@ function Dashboard() {
                 <Route path="/" element={<Home />} />
                 <Route path="/room" element={<Rooms />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/roomdetails/:id" element={<RoomDetails />} />
+
+
                 <Route path="/roombook/:id" element={<RoomBook />} />
                 <Route path="/userpanel" element={authentication ? <UserPanel /> : <Login />} />
                 <Route path="/admin" element={authentication ? <Admin /> : <Login />} />

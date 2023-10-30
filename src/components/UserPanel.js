@@ -50,7 +50,6 @@ function UserPanel() {
 
   return (
     <div className="adminpage">
-      <Navbar />
       <div >
         <h2>User Panel</h2>
         <br /><br />

@@ -8,7 +8,7 @@ function Footer() {
         <div className='footer'>
             <footer class="text-center text-lg-start text-white">
                 <section class="d-flex justify-content-center justify-content p-4 border-bottom">
-        
+
                     {/* <!-- Right --> */}
                     <div className="d-flex justify-content-center text-dark"> {/* Center-align icons */}
                         <a href="#" className="me-4 text-reset">
@@ -41,9 +41,9 @@ function Footer() {
                             <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
 
                                 <h6 class="text-uppercase fw-bold mb-4 text-dark">Apna Hotel</h6>
-                                <p>
-                                    Here you can use rows and columns to organize your footer
-                                 
+                                <p className="p-1" style={{textAlign:'justify'}}>
+                                    A hotel management system is a software application that helps hotels and other lodging establishments efficiently manage their operations
+
                                 </p>
                             </div>
 

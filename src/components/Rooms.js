@@ -7,13 +7,16 @@ import { useNavigate } from 'react-router-dom';
 import './style.css';
 import { FaIndianRupeeSign } from 'react-icons/fa6';
 
-
 function Rooms() {
     const navigate = useNavigate();
 
     function booking(id) {
         // navigate(`/roombook/${id}`);
         navigate(`/signup/${id}`);
+    }
+
+    function viewDetails(id){
+        navigate(`/roomdetails/${id}`);
     }
 
     return (
@@ -42,9 +45,9 @@ function Rooms() {
                                             <p>Services: {room.services}</p>
                                         </div>
                                     </div>
-                                    <button className="btn btn-primary" onClick={() => booking(room.id)}>Book Now</button>
+                                    <button className="btn btn-primary me-2" onClick={() => booking(room.id)}>Book Now</button>
+                                    <button class="btn btn-primary" onClick={() => viewDetails(room.id)}>View Details</button>
                                 </div>
-
                             </div>
                         </div>
                     ))}
