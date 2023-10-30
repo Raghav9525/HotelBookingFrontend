@@ -7,7 +7,7 @@ function About() {
     return (
         <>
             <h1 class="fs-1 text-primary text-center mt-3">About</h1>
-            <div class="container">
+            <div class="container mb-2">
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="card">
@@ -30,9 +30,7 @@ function About() {
                                 doloribus aliquam cupiditate quas deserunt odio placeat eos
                                 voluptates labore ipsum a quia! Possimus repellat at laboriosam
                                 voluptatibus, quos eveniet voluptatem, hic, expedita porro
-                                accusamus dolorum. Explicabo ipsam recusandae enim nesciunt cumque
-                                sapiente minus? Fuga quas, impedit commodi ab beatae odio natus
-                                corporis distinctio harum totam sed eveniet. Veritatis illo velit
+                                accusamus dolorum. Explicabo ipsam recusandae enim nesciunt.
                             </p>
                         </div>
                     </div>

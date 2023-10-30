@@ -12,8 +12,8 @@ function RoomBook() {
     let { id } = useParams();
     // Convert id to an integer
     id = parseInt(id);
-  
-     // Find the room data with the matching id
+
+    // Find the room data with the matching id
     const room = roomData.find((room) => room.id === id);
 
     // set initial value to value state
@@ -30,7 +30,7 @@ function RoomBook() {
         message: '',
     });
 
- 
+
 
     const submitForm = (event) => {
         event.preventDefault();
@@ -55,14 +55,31 @@ function RoomBook() {
         }
     }
 
-
     const handleInput = (event) => {
         setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
     }
 
-    function payment_page() {
-        navigate('/payment')
+    function payment_page(id) {
+        console.log("Price: " + room.price);
+    
+        const timeDifference = new Date(values.checkout_date) - new Date(values.checkin_date); // Difference in milliseconds
+        const daysDifference = timeDifference / (1000 * 60 * 60 * 24); // Convert milliseconds to days
+    
+        console.log(`Number of days: ${daysDifference}`);
+
+        let bill = null
+        
+        // Check if room.price is a valid number before calculating the bill
+        if (!isNaN(parseFloat(room.price))) {
+           bill = parseFloat(room.price) * daysDifference;
+            console.log("Bill: " + bill);
+        } else {
+            console.log("Invalid room price");
+        }
+    
+        navigate(`/payment/${bill}`);
     }
+    
 
     return (
         <>
@@ -109,7 +126,7 @@ function RoomBook() {
                     </form>
                     {insertionStatus.isSuccess && (
                         <div>
-                            <button className="btn btn-primary" onClick={() => payment_page()}>Proceed to Payment</button>
+                            <button className="btn btn-primary" onClick={() => payment_page(id)}>Proceed to Payment</button>
                             <h3>{insertionStatus.message}</h3>
                         </div>
                     )}

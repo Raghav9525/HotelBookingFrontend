@@ -32,7 +32,7 @@ function Dashboard() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/adminlogin" element={<AdminLogin />} />
                 <Route path="/signup/:id" element={<Signup />} />
-                <Route path="/payment" element={<Payment />} />
+                <Route path="/payment/:bill" element={<Payment />} />
 
                 <Route path="/about" element={<About />} />
                 {/* <Route path='/admin/studentdata' element={<StudentData />} />

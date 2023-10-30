@@ -54,7 +54,7 @@ function Signup() {
         <>
             <div id="booking-container" class="container-fluid vh-100">
 
-                <h5>If Already Register click Continue to booking</h5>
+                <h5>If Already Register click Continue Booking Button</h5>
                 <div class="row mt-4">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
@@ -107,7 +107,7 @@ function Signup() {
                                 </div>
 
                                 <button type="submit" class="btn btn-primary me-2">SignUp</button>
-                                <button onClick={() => navigate(`/roombook/${id}`)} class="btn btn-primary">Already Register</button>
+                                <button onClick={() => navigate(`/roombook/${id}`)} class="btn btn-primary">Continue Booking</button>
 
                                 <br />
                                 <NavLink to="/Login">New user?Login</NavLink>
