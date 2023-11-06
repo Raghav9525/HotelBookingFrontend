@@ -65,13 +65,16 @@ function Footer() {
 
                             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                                 <h6 class="text-uppercase fw-bold mb-4 text-dark">Contact</h6>
-                                <p><i class="fas fa-home me-3"></i> Darbhanga Bihar</p>
-                                <p>
-                                    <i class="fas fa-envelope me-3"></i>
-                                    info@example.com
+                                <p><i class="fas fa-phone me-3"></i>7632966717,7542061065</p>
+                                <p style={{whiteSpace: "nowrap"}}>
+                                    Gmail: kshubham9525@gmail.com
                                 </p>
-                                <p><i class="fas fa-phone me-3"></i>7542061065</p>
-                                <p><i class="fas fa-phone me-3"></i>7632966717</p>
+                                <p style={{whiteSpace: "nowrap"}}>
+                                    GitHub: https://github.com/Raghav9525/
+                                </p>
+                                <p >
+                                    Linkdin: https://www.linkedin.com/in/shubham-chaudhary-82b440242 
+                                </p>    
 
                             </div>
                         </div>

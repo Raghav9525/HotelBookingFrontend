@@ -27,7 +27,7 @@ function Rooms() {
                         <div className="col-sm-4" key={room.id}>
                             <div className="card mb-5">
                                 <div>
-                                    <img  className="d-block w-100 img-fluid mx-auto" src={room.imageSrc} alt="room-img" />
+                                    <img className="d-block w-100 img-fluid mx-auto" src={room.imageSrc} alt="room-img" />
                                 </div>
                                 <div className="card-body">
                                     <h4>{room.name}</h4>
